@@ -1,0 +1,14 @@
+{
+  "usingComponents": {
+    "i-tabs": "../../../dist/tabs/index",
+    "i-tab": "../../../dist/tab/index",
+    "i-page": "../../../dist/page/index",
+    "i-button": "../../../dist/button/index",
+    "i-checkbox-group": "../../../dist/checkbox-group/index",
+    "i-checkbox": "../../../dist/checkbox/index",
+    "i-modal": "../../../dist/modal/index",
+    "i-toast": "../../../dist/toast/index",
+    "i-icon": "../../../dist/icon/index",
+    "i-panel": "../../../dist/panel/index"
+  }
+}

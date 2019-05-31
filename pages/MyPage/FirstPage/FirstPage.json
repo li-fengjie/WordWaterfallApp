@@ -1,0 +1,14 @@
+{
+  "usingComponents": {
+    "i-tab-bar": "../../../dist/tab-bar/index",
+    "i-tab-bar-item": "../../../dist/tab-bar-item/index",
+    "i-panel": "../../../dist/panel/index",
+    "i-button": "../../../dist/button/index",
+    "van-transition": "../../../dist2/transition/index",
+    "van-popup": "../../../dist2/popup/index",
+    "van-panel": "../../../dist2/panel/index",
+    "van-button":"../../../dist2/button/index",
+        "van-dialog": "../../../dist2/dialog/index",
+        "van-field": "../../../dist2/field/index"
+  }
+}

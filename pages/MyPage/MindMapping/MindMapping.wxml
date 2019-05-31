@@ -1,0 +1,15 @@
+<!--pages/MyPage/MindMapping/MindMapping.wxml-->
+<include src="/utils/tabbar/tabbar.wxml" />
+<view class="cu-bar bg-white search fixed" style="top:0px;">
+  <view class='search-form round'>
+    <text class="icon-search"></text>
+    <input type="text" placeholder="输入搜索的关键词" confirm-type="search" bindinput='getData'></input>
+  </view>
+  <view class='action'>
+    <button class='cu-btn bg-gradual-blue shadow-blur round' bindtap='onSearch'>搜索</button>
+  </view>
+</view>
+<view class="box">
+  <ec-canvas id="mychart-dom-bar" canvas-id="mychart-bar" ec="{{ ec }}"></ec-canvas>
+</view>
+<i-toast id="toast"/>

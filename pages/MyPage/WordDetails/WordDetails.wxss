@@ -1,0 +1,99 @@
+/* pages/MyPage/WordDetails/WordDetails.wxss */
+.box {
+	width:100%;
+	height:600rpx;
+	position: relative;
+	left: 0;
+	right: 0;
+} 
+.list-msg {
+  padding: 0 20rpx;
+  background-color: #fff;
+  position: relative;
+}
+
+.list-msg1 {
+  height: 60rpx;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 10rpx;
+  padding-left: 30rpx;
+  padding-bottom: 20rpx;
+  font-size: 28rpx;
+}
+
+.list-msg2 {
+  height: 60rpx;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 10rpx;
+  padding-left: 60rpx;
+  padding-bottom: 20rpx;
+  font-size: 28rpx;
+}
+
+.select_box {
+  background-color:rgb(248, 239, 239);
+  width: 100%;
+  position: absolute;
+  top: 130rpx;
+  z-index: 1;
+  overflow: hidden;
+  animation: myfirst 0.5s;
+}
+
+@keyframes myfirst {
+  from {
+    height: 0rpx;
+  }
+
+  to {
+    height: 210rpx;
+  }
+}
+
+.select_1 {
+  height: 60rpx;
+  line-height: 60rpx;
+  border-bottom: 1px solid #ccc;
+  padding-left: 210rpx;
+ color: rgba(250, 62, 62, 0.678);
+}
+.select_2 {
+  height: 60rpx;
+  line-height: 60rpx;
+  border-bottom: 1px solid #ccc;
+  padding-left: 210rpx;
+  color: rgb(252, 207, 84);
+}
+.select_3 {
+  height: 60rpx;
+  line-height: 60rpx;
+  border-bottom: 1px solid #ccc;
+  padding-left: 210rpx;
+  color: rgb(250, 253, 67);
+}
+
+.select_4 {
+  height: 60rpx;
+  line-height: 60rpx;
+  border-bottom: 1px solid #ccc;
+  padding-left: 210rpx;
+    color: rgb(44, 250, 216);
+}
+.select_5 {
+  height: 60rpx;
+  line-height: 60rpx;
+  border-bottom: 1px solid #ccc;
+  padding-left: 210rpx;
+    color: rgb(67, 200, 253);
+}
+.select_6 {
+  height: 60rpx;
+  line-height: 60rpx;
+  border-bottom: 1px solid #ccc;
+  padding-left: 210rpx;
+    color: rgb(219, 128, 255);
+}

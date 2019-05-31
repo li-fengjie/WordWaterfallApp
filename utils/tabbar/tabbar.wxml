@@ -1,0 +1,6 @@
+<view style="height:{{ tabbarHeight }}"></view>
+<i-tab-bar current="{{ current }}" color="#f759ab" bindchange="handleChange" fixed="true">
+    <i-tab-bar-item key="FirstPage" icon="homepage" current-icon="homepage_fill" title="单词瀑布"></i-tab-bar-item>
+    <i-tab-bar-item key="MyWords" icon="group" current-icon="group_fill" title="我的单词"></i-tab-bar-item>
+    <i-tab-bar-item key="MindMapping" icon="mine" current-icon="mine_fill" title="思维导图"></i-tab-bar-item>
+</i-tab-bar>

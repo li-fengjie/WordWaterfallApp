@@ -1,0 +1,24 @@
+{
+  "pages": [
+    "pages/MyPage/FirstPage/FirstPage",
+    "pages/MyPage/MindMapping/MindMapping",
+    "pages/MyPage/MyWords/MyWords",
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/MyPage/moveimg/moveimg",
+    "pages/MyPage/WordBooks/WordBooks",
+    "pages/MyPage/BookWords/BookWords",
+    "pages/MyPage/WordDetails/WordDetails"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "瀑布记忆",
+    "navigationBarTextStyle": "black"
+  },
+  "usingComponents": {
+    "i-tab-bar": "../dist/tab-bar/index",
+    "i-tab-bar-item": "../dist/tab-bar-item/index"
+  },
+  "sitemapLocation": "sitemap.json"
+}

@@ -1,0 +1,20 @@
+{
+  "usingComponents": {
+    "i-tabs": "../../../dist/tabs/index",
+    "i-tab": "../../../dist/tab/index",
+    "i-page": "../../../dist/page/index",
+    "i-button": "../../../dist/button/index",
+    "i-checkbox-group": "../../../dist/checkbox-group/index",
+    "i-checkbox": "../../../dist/checkbox/index",
+    "i-modal": "../../../dist/modal/index",
+    "i-toast": "../../../dist/toast/index",
+    "i-icon": "../../../dist/icon/index",
+    "i-cell-group": "../../../dist/cell-group/index",
+    "i-cell": "../../../dist/cell/index",
+    "i-index": "../../../dist/index/index",
+    "i-index-item": "../../../dist/index-item/index",
+    "van-tree-select": "../../../dist2/tree-select/index",
+    "van-icon": "../../../dist2/icon/index",
+    "van-search": "../../../dist2/search/index"
+  }
+}

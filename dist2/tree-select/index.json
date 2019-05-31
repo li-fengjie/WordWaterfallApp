@@ -1,0 +1,8 @@
+{
+  "component": true,
+  "usingComponents": {
+    "van-icon": "../icon/index",
+    "van-cell": "../cell/index",
+    "i-icon": "../../dist/icon/index"
+  }
+}

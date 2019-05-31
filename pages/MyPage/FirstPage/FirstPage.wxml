@@ -1,0 +1,46 @@
+<!--pages/MyPage/FirstPage/FirstPage.wxml-->
+<view class="myContainer">
+  <view class="column1">
+    <block wx:for="{{w1}}">
+      <van-transition show="{{item.show==''?true:false}}" duration="{{ { enter: 10, leave: 600 } }}" custom-class="block" name="fade">
+        <button class="cu-btn bg-{{color[(index+index1-1)%12]}} lg" style='color:white;background-color:{{item.color}};font-size:40rpx;height:{{item.length*25}}rpx;display:{{item.show}};width:220rpx;margin-left:25rpx;margin-top:20rpx' bindtap='wordAdd' data-text="{{item.name}}">
+          {{item.name}}
+        </button>
+      </van-transition>
+    </block>
+  </view>
+  <view class="column2">
+    <block wx:for="{{w2}}">
+    <van-transition show="{{item.show==''?true:false}}" duration="{{ { enter: 10, leave: 600 } }}" custom-class="block" name="fade">
+      <button class="cu-btn bg-{{color[(index+5)%12]}} lg" style='background-color:{{item.color}};font-size:40rpx;height:{{item.length*25}}rpx;display:{{item.show}};width:220rpx;margin-left:10rpx;margin-top:20rpx' bindtap='wordAdd' data-text="{{item.name}}">
+        {{item.name}}
+      </button>
+      </van-transition>
+    </block>
+  </view>
+  <view class="column1">
+    <block wx:for="{{w3}}">
+    <van-transition show="{{item.show==''?true:false}}" duration="{{ { enter: 10, leave: 600 } }}" custom-class="block" name="fade">
+      <button class="cu-btn bg-{{color[(index+8)%12]}} lg" style='background-color:{{item.color}};font-size:40rpx;height:{{item.length*25}}rpx;display:{{item.show}};width:220rpx;margin-left:10rpx;margin-top:20rpx' bindtap='wordAdd' data-text="{{item.name}}">
+        {{item.name}}
+      </button>
+      </van-transition>
+    </block>
+  </view>
+</view>
+<view>
+  <button class='cu-btn lines-blue lg' style='margin-left:210rpx' bindtap='setSpeed'>设置单词跳转速度</button>
+</view>
+<van-popup show="{{ show }}" position='top' bind:close="onClose" overlay='{{overlay}}'>
+  <i-panel title="{{word}}">
+    <view style="padding: 15px;">{{details1}}</view>
+    <view style="padding:15px">{{details2}}</view>
+    <view style='padding:15px'>
+      <button class='cu-btn bg-blue' style="margin-left:130px;height:50rpx" bindtap='handleClick'>查看详情</button>
+    </view>
+  </i-panel>
+</van-popup>
+<van-dialog use-slot show="{{ show4 }}" show-cancel-button confirm-button-open-type="getUserInfo" bind:close="onClose2" bind:getuserinfo="getUserInfo" bind:confirm='confirm'>
+  <van-field value="{{ value2 }}" label="单词" placeholder="设置单词跳转速度(单位:秒)" border="{{ false }}" bind:change="onChange1" />
+</van-dialog>
+<include src="/utils/tabbar/tabbar.wxml" />

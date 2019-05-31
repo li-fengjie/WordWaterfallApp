@@ -1,0 +1,18 @@
+{
+  "usingComponents": {
+    "i-panel": "../../../dist/panel/index",
+    "van-panel": "../../../dist2/panel/index",
+    "i-icon": "../../../dist/icon/index",
+    "van-icon": "../../../dist2/icon/index",
+    "i-switch": "../../../dist/switch/index",
+    "van-dialog": "../../../dist2/dialog/index",
+    "i-input": "../../../dist/input/index",
+    "van-picker": "../../../dist2/picker/index",
+    "van-field": "../../../dist2/field/index",
+    "van-radio": "../../../dist2/radio/index",
+    "van-radio-group": "../../../dist2/radio-group/index",
+    "i-radio-group": "../../../dist/radio-group/index",
+    "i-radio": "../../../dist/radio/index",
+    "ec-canvas": "../../../ec-canvas/ec-canvas"
+  }
+}

@@ -1,0 +1,79 @@
+<!--pages/MyPage/WordDetails/WordDetails.wxml-->
+<i-panel>
+  <view>
+    <view style='display:flex;flex-direction:row;width:720rpx;margin-left:30rpx;margin-top:15rpx;border-bottom:1rpx solid gainsboro;'>
+      <text style='font-size:60rpx;width:360rpx;'>{{word}}</text>
+      <text style='font-size:30rpx;margin-left:50rpx;margin-top:15rpx'>加至瀑布:</text>
+      <i-switch value="{{switch1}}" bind:change="onChange" slot="footer" style='margin-left:20rpx;margin-top:10rpx'>
+        <i-icon type="right" slot="open"></i-icon>
+        <i-icon type="close" slot="close"></i-icon>
+      </i-switch>
+    </view>
+  </view>
+  <view>
+    <view style='display:flex;flex-direction:column;width:720rpx;margin-left:30rpx;border-bottom:1rpx solid gainsboro'>
+      <view style='font-size:35rpx;color:#2d8cf0;margin-top:15rpx;'>{{details1}}</view>
+      <view style='font-size:35rpx;margin-top:15rpx;margin-bottom:15rpx;'>{{details2}}</view>
+    </view>
+  </view>
+  <view>
+    <view style='display:flex;flex-direction:column;width:720rpx;margin-left:30rpx;border-bottom:1rpx solid gainsboro'>
+      <view style='font-size:35rpx;margin-top:15rpx;'>短语</view>
+      <block wx:for="{{phrases}}">
+        <view style='font-size:33rpx;margin-top:8rpx;'>{{index+1}}. {{item}}</view>
+      </block>
+      <view style='margin-bottom:15rpx;'></view>
+    </view>
+  </view>
+  <view>
+    <view style='display:flex;flex-direction:column;width:720rpx;margin-left:30rpx'>
+      <view style='font-size:35rpx;margin-top:15rpx;'>例句</view>
+      <view style='font-size:33rpx;disabled:true;margin-top:8rpx;'>
+        {{sentence_C}}
+      </view>
+      <view style='font-size:33rpx;disabled:true;margin-top:8rpx;margin-bottom:15rpx;'>
+        {{sentence_E}}
+      </view>
+    </view>
+  </view>
+</i-panel>
+<i-panel title=" ">
+  <view style='display:flex;flex-direction:row;width:720rpx;margin-left:30rpx;margin-top:15rpx;border-bottom:1rpx solid gainsboro'>
+    <text style='font-size:45rpx'>思维导图</text>
+    <i-icon type="browse" size="30" color="#5cadff" style='margin-left:300rpx;padding-top:5rpx;' bindtap='checkInf' />
+    <i-icon type="add" size="30" color="#5cadff" style='margin-left:15rpx;padding-top:5rpx;' bindtap='addWord' />
+    <i-icon type="close" size="26" color="#5cadff" style='margin-left:15rpx;padding-top:7rpx;' bindtap='deleteWord' />
+  </view>
+</i-panel>
+<view class="box">
+  <ec-canvas id="mychart-dom-bar" canvas-id="mychart-bar" ec="{{ ec }}"></ec-canvas>
+</view>
+<van-dialog use-slot show="{{ show }}" show-cancel-button confirm-button-open-type="getUserInfo" bind:close="onClose1" bind:getuserinfo="getUserInfo">
+  <van-field value="{{ value }}" label="单词" placeholder="请输入单词" border="{{ false }}" bind:change="onChange" />
+  <view style='display:flex;flex-direction:row'>
+    <view class='list-msg1'>
+      <text>单词关系</text>
+    </view>
+    <view class='list-msg2' bindtap='bindShowMsg'>
+      <text style='color: {{color}}'>{{tihuoWay}}</text>
+    </view>
+    <view class="select_box" wx:if="{{select}}">
+      <view class="select_1" bindtap="mySelect1" data-name="近义词">近义</view>
+      <view class="select_2" bindtap="mySelect3" data-name="反义词">反义</view>
+      <view class="select_3" bindtap="mySelect4" data-name="形近词">形近</view>
+      <view class="select_4" bindtap="mySelect5" data-name="音近词">音近</view>
+      <view class="select_5" bindtap="mySelect6" data-name="自定义关系">搭配</view>
+    </view>
+  </view>
+  <view style='width:100%;display:{{show2}};color:white'>''</view>
+  <view style='width:100%;display:{{show2}};color:white'>''</view>
+  <view style='width:100%;display:{{show2}};color:white'>''</view>
+  <view style='width:100%;display:{{show2}};color:white'>''</view>
+  <view style='width:100%;display:{{show2}};color:white'>''</view>
+  <view style='width:100%;display:{{show2}};color:white'>''</view>
+  <view style='width:100%;display:{{show2}};color:white'>''</view>
+  <view style='width:100%;display:{{show2}};color:white'>''</view>
+</van-dialog>
+<van-dialog use-slot show="{{ show3 }}" show-cancel-button confirm-button-open-type="getUserInfo" bind:close="onClose2" bind:getuserinfo="getUserInfo">
+  <van-field value="{{ value2 }}" label="单词" placeholder="请输入需要删除的关系单词" border="{{ false }}" bind:change="onChange1" />
+</van-dialog>

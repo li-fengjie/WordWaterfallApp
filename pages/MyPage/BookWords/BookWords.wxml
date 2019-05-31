@@ -1,0 +1,24 @@
+<!--pages/MyPage/BookWords/BookWords.wxml-->
+<view style='height:900rpx'>
+  <i-panel title="{{name}}">
+    <i-checkbox-group current="{{current1}}" bindchange="handleFruitChange" style="display:{{show2}}">
+      <i-checkbox wx:for="{{wordList}}" wx:if="{{index<=((pagenow-1)*7+6) && index>=((pagenow-1)*7)}}" position="right" value="{{item}}">
+      </i-checkbox>
+    </i-checkbox-group>
+  </i-panel>
+</view>
+<view style='margin-top:40rpx'>
+<button class='cu-btn lines-blue shadow' style='width:200rpx;margin-top:20rpx;margin-left:275rpx;' bindtap="addWords">一键添加</button>
+</view>
+<view style="margin-top:20rpx;">
+  <i-page current="{{ pagenow }}" total="{{pagenum}}" bind:change="handleChangePage" mode="button">
+    <view slot="prev">
+      <i-icon type="return"></i-icon>
+      上一页
+    </view>
+    <view slot="next">
+      下一页
+      <i-icon type="enter"></i-icon>
+    </view>
+  </i-page>
+</view>

@@ -1,0 +1,9 @@
+/* pages/MyPage/MindMapping/MindMapping.wxss */
+.box {
+	width:100%;
+	height:900rpx;
+  margin-top:120rpx;
+	position: relative;
+	left: 0;
+	right: 0;
+} 

@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "ec-canvas": "../../../ec-canvas/ec-canvas",
+    "van-search": "../../../dist2/search/index",
+    "i-toast": "../../../dist/toast/index"
+  }
+}

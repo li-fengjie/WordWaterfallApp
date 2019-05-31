@@ -1,0 +1,12 @@
+<!--pages/MyPage/WordBooks/WordBooks.wxml-->
+<block wx:for="{{bookList}}">
+  <i-card title="{{item.name}}" thumb="{{item.image}}">
+        <view slot="content" style="display: flex; flex-direction: row;">
+        <text style="color:#2292DD">总单词数：{{item.total}}</text>
+        <button id="{{index}}" class="cu-btn lines-blue round shadow" style="height:50rpx;font-size:14px;margin-left:230rpx;" bindtap="turnToBookWords">加入单词</button>
+        </view>
+        <view slot="footer">
+          <text>已加入单词数：{{item.now}}</text>
+        </view>
+  </i-card>
+</block>

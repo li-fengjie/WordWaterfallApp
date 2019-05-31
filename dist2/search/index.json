@@ -1,0 +1,8 @@
+{
+  "component": true,
+  "usingComponents": {
+
+    "van-field": "../field/index",
+    "i-icon": "../../dist/icon/index"
+  }
+}

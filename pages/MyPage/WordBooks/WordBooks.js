@@ -1,0 +1,81 @@
+// pages/MyPage/WordBooks/WordBooks.js
+Page({
+
+  /**
+   * 页面的初始数据
+   */
+  data: {
+    bookList:[
+      {'name':'四级单词','image':'../../images/CET4.png.jpg','total':3000,'now':11},
+      { 'name': '六级单词', 'image': '../../images/CET6.jpg', 'total': 3000, 'now': 7},
+      { 'name': '雅思单词', 'image': '../../images/IELT.jpg', 'total': 6000, 'now': 13}
+    ]
+  },
+
+  /**
+   * 生命周期函数--监听页面加载
+   */
+  onLoad: function (options) {
+
+  },
+
+  /**
+   * 生命周期函数--监听页面初次渲染完成
+   */
+  onReady: function () {
+
+  },
+
+  /**
+   * 生命周期函数--监听页面显示
+   */
+  onShow: function () {
+
+  },
+
+  /**
+   * 生命周期函数--监听页面隐藏
+   */
+  onHide: function () {
+
+  },
+
+  /**
+   * 生命周期函数--监听页面卸载
+   */
+  onUnload: function () {
+
+  },
+
+  /**
+   * 页面相关事件处理函数--监听用户下拉动作
+   */
+  onPullDownRefresh: function () {
+
+  },
+
+  /**
+   * 页面上拉触底事件的处理函数
+   */
+  onReachBottom: function () {
+
+  },
+
+  /**
+   * 用户点击右上角分享
+   */
+  onShareAppMessage: function () {
+
+  },
+  /**
+   * 转入具体的书籍单词列表
+   */
+  turnToBookWords:function(e)
+  {
+    var name = this.data.bookList[e.target.id].name;
+    console.log(name);
+    wx.navigateTo({
+      url: '../BookWords/BookWords?name='+name,
+    })
+  }
+})
