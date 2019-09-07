@@ -225,6 +225,30 @@ Page({
 
   onChange(event) {
     const detail = event.detail;
+    console.log(detail);
+    // wx.request({
+    //   url: app.globalData.URL + '/addRela.do',
+    //   method: 'POST',
+    //   data: { wId: that.data.wordList[that.data.mainActiveIndex].children[that.data.activeId - 1].text },
+    //   header: {
+    //     'content-type': 'application/json'
+    //   },
+    //   success: function (res) {
+    //     // console.log(res.data.data);
+    //     that.setData({
+    //       detail_0: res.data.data,
+    //     })
+    //     // console.log(that.data.detail_0);
+    //     var detail
+    //     detail = JSON.stringify(that.data.detail_0);
+    //     wx.navigateTo({
+    //       url: '../WordDetails/WordDetails?detail=' + detail,
+    //     })
+    //   },
+    //   fail: function (err) {
+    //     console.log("sssssssssssss" + err.data);
+    //   }
+    // })
     this.setData({
       'switch1': detail.value
     })
